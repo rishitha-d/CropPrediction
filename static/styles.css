@@ -14,29 +14,39 @@ body {
 }
 
 /* Form container */
-.form-box {
-  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+.login {
+  background: rgb(94, 117, 71); /* semi-transparent white */
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   width: 350px;
-  text-align: center;
+  text-align: left;   /* better alignment for labels */
+}
+
+/* Make form elements vertical */
+.login input[type="text"],
+.login input[type="number"],
+.login input[type="submit"],
+.login select,
+.login button {
+  display: block;         /* each element on a new line */
+  width: 100%;            /* stretch to full width of box */
+  margin-bottom: 12px;    /* spacing between elements */
 }
 
 /* Input fields */
-.form-box input[type="text"],
-.form-box input[type="number"],
-.form-box select {
-  width: 100%;
+.login input[type="text"],
+.login input[type="number"],
+.login select {
   padding: 10px;
-  margin: 8px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
 }
 
 /* Submit button */
-.form-box input[type="submit"] {
+.login input[type="submit"],
+.login button {
   background: #28a745;
   color: white;
   padding: 10px;
@@ -47,6 +57,7 @@ body {
   transition: 0.3s ease;
 }
 
-.form-box input[type="submit"]:hover {
+.login input[type="submit"]:hover,
+.login button:hover {
   background: #218838;
 }
